@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>P05 Jquery Sliding</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<style>
+		#klik, #pengertian{
+			background-color: lightcoral;
+			text-align: center;
+			font-family: spring;
+			color: white;
+			cursor: default;
+			padding: 10px;
+			border: solid 4px;
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		#klik:hover{
+			transform: scale(1.1);
+			box-shadow: 1px 1px 6px #8888 ;
+			letter-spacing: 1px;
+		}
+
+		#pengertian{
+			font-family: initial;
+			letter-spacing: 1px;
+			display: none;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="klik">JQuery slide</div>
+	<div id="pengertian" style="display: none;">
+		<p>
+		JQuery adalah sebuah library framework javascript. jadi singkat ceritanya JQuery merupakan pengembangan dari javascript yang sengaja di buat untuk memudahkan kita untuk mendevelop sebuah website dan ingin membuat efek-efek dan keperluan penggunaan javascript lainnya di dalam pengembangan sebuah website. sampai saat ini jQuery sudah sangat di kenal di dunia web programming. sehingga banyak plugin-plugin web lainnya yang di bangun menggunakan JQuery sebagai base nya. contohnya seperti plugin calender, grafik, export html to image, design komponen web dan sebagainya.
+		</p>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#klik").click(function(){
+              $("#pengertian").slideToggle();
+			});
+		});
+	</script>
+</body>
+</html>
